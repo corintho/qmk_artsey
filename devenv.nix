@@ -5,5 +5,7 @@
 
   languages.c.enable = true;
 
-  # See full reference at https://devenv.sh/reference/options/
+  enterShell = ''
+      qmk config user.overlay_dir="$(realpath .)"
+  '';
 }
