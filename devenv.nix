@@ -1,7 +1,7 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  packages = [ pkgs.qmk pkgs.dos2unix ];
+  packages = [ pkgs.qmk pkgs.dos2unix pkgs.just pkgs.watchexec];
 
   languages.c.enable = true;
 
