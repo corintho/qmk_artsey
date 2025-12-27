@@ -1,6 +1,7 @@
 keyboard := "artsey_io"
 device := "/dev/sdg1"
 device_id := "2e8a:0003"
+firmware := "artsey_io_left_liatris.uf2"
 
 default:
     @just --list
@@ -11,10 +12,12 @@ lint:
 lint-watch:
     watchexec -w keyboards/{{keyboard}} just lint
 
-make: make-left
-
+make: make-left make-left-liatris
 make-left:
     qmk compile -kb artsey_io -km left
+
+make-left-liatris:
+    qmk compile -kb artsey_io -km left_liatris
 
 install: make
     #!/usr/bin/env sh
@@ -26,6 +29,6 @@ install: make
     fi
     mkdir -p .drive
     sudo mount {{device}} .drive -o umask=000
-    cp artsey_io_left.uf2 .drive
+    cp {{firmware}} .drive
     sudo umount .drive
     rm -r .drive
