@@ -1,6 +1,9 @@
 name: Build QMK firmware
 
-on: [push, workflow_dispatch]
+on:
+  push:
+    tags:
+      - "v*.*.*"
 
 permissions:
   contents: write
@@ -20,3 +23,5 @@ jobs:
     uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
     if: always() && !cancelled()
     needs: build
+    with:
+        release_name: github.ref_name
