@@ -19,6 +19,7 @@ compile_commands.json
 .devenv*
 devenv.local.nix
 devenv.local.yaml
+.env
 
 # direnv
 .direnv
