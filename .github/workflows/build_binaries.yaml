@@ -19,9 +19,25 @@ jobs:
        qmk_ref: master
 
   publish:
-    name: 'QMK Userspace Publish'
-    uses: qmk/.github/.github/workflows/qmk_userspace_publish.yml@main
+    name: Publish
     if: always() && !cancelled()
-    needs: build
-    with:
-        release_name: github.ref_name
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download binaries
+        if: always() && !cancelled()
+        uses: actions/download-artifact@v4
+        with:
+          name: Firmware
+
+      - name: Generate Release
+        uses: softprops/action-gh-release@v2
+        if: always() && !cancelled()
+        with:
+          fail_on_unmatched_files: false
+          draft: false
+          prerelease: false
+          files: |
+            **/*.hex
+            **/*.bin
+            **/*.uf2
