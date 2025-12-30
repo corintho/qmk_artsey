@@ -27,11 +27,11 @@ make-left-liatris:
 
 # Build compile_commands.json compatible with basic target
 workon-left:
-    bear -- qmk compile -kb {{keyboard}} -km left --clean
+    qmk compile -kb {{keyboard}} -km left --compiledb
 
 # Build compile_commands.json compatible with liatris target
 workon-left-liatris:
-    bear -- qmk compile -kb {{keyboard}} -km left_liatris --clean
+    qmk compile -kb {{keyboard}} -km left_liatris --compiledb
 
 # Install the firmware. Check the code for overridable values
 install: make

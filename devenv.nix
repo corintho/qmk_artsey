@@ -1,7 +1,8 @@
 { pkgs, ... }:
 
 {
-  packages = [ pkgs.qmk pkgs.dos2unix pkgs.usbutils pkgs.just pkgs.watchexec pkgs.bear ];
+  packages = with pkgs; [ qmk dos2unix usbutils just watchexec ];
 
   languages.c.enable = true;
+  dotenv.disableHint = true;
 }
