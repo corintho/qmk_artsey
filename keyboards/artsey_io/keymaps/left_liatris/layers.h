@@ -1,3 +1,5 @@
+#pragma once
+
 #define BASE_1_4 LT(_ART_SYM,KC_A)
 #define BASE_1_3 KC_R
 #define BASE_1_2 KC_T
@@ -54,3 +56,14 @@
 #define NAV_2_3 KC_DOWN
 #define NAV_2_2 KC_LEFT
 #define NAV_2_1 KC_PGDN
+
+enum layers {
+  _ART_BASE,
+  _ART_NUM,
+  _ART_CUS,
+  _ART_PUNC,
+  _ART_MOU,
+  _ART_NAV,
+  _ART_SYM,
+};
+

@@ -3,18 +3,8 @@
 
 #include QMK_KEYBOARD_H
 
-enum layers {
-  _ART_BASE,
-  _ART_NUM,
-  _ART_CUS,
-  _ART_PUNC,
-  _ART_MOU,
-  _ART_NAV,
-  _ART_SYM,
-};
-
-#include "aliases.c"
-#include "combos.c"
+#include "layers.h"
+#include "combos.h"
 
 // copied from https://beta.docs.qmk.fm/faqs/faq_debug#which-matrix-position-is-this-keypress
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

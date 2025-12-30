@@ -1,3 +1,11 @@
+#include <stdint.h>
+#include "action_layer.h"
+#include "action_util.h"
+#include "process_combo.h"
+#include "progmem.h"
+#include "send_string.h"
+#include "layers.h"
+
 enum combo_events{
 ARTSEY_H,
 ARTSEY_Q,
