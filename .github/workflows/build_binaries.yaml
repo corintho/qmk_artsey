@@ -11,7 +11,7 @@ permissions:
 jobs:
   build:
     name: 'QMK Userspace Build'
-    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@main
+    uses: qmk/.github/.github/workflows/qmk_userspace_build.yml@2136ded0cdc263e4cc0c2abced3ad4e2222cf1cb
     with:
        # Use my fork of the QMK firmware repository
        # qmk_repo: qmk/qmk_firmwar
@@ -26,12 +26,12 @@ jobs:
     steps:
       - name: Download binaries
         if: always() && !cancelled()
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           name: Firmware
 
       - name: Generate Release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b
         if: always() && !cancelled()
         with:
           fail_on_unmatched_files: false
