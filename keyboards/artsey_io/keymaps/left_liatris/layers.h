@@ -1,13 +1,13 @@
 #pragma once
 
-#define BASE_1_4 LT(_ART_SYM,KC_A)
+#define BASE_1_4 LT(_ART_SYM, KC_A)
 #define BASE_1_3 KC_R
 #define BASE_1_2 KC_T
-#define BASE_1_1 LT(_ART_NUM,KC_S)
-#define BASE_2_4 LT(_ART_PUNC,KC_E)
+#define BASE_1_1 LT(_ART_NUM, KC_S)
+#define BASE_2_4 LT(_ART_PUNC, KC_E)
 #define BASE_2_3 KC_Y
 #define BASE_2_2 KC_I
-#define BASE_2_1 LT(_ART_CUS,KC_O)
+#define BASE_2_1 LT(_ART_CUS, KC_O)
 #define NUM_1_4 KC_1
 #define NUM_1_3 KC_2
 #define NUM_1_2 KC_3
@@ -58,12 +58,11 @@
 #define NAV_2_1 KC_PGDN
 
 enum layers {
-  _ART_BASE,
-  _ART_NUM,
-  _ART_CUS,
-  _ART_PUNC,
-  _ART_MOU,
-  _ART_NAV,
-  _ART_SYM,
+    _ART_BASE,
+    _ART_NUM,
+    _ART_CUS,
+    _ART_PUNC,
+    _ART_MOU,
+    _ART_NAV,
+    _ART_SYM,
 };
-
