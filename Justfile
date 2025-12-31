@@ -17,6 +17,10 @@ lint-watch:
 # Build all targets
 make: make-left make-left-liatris
 
+# Clean build folders
+clean:
+    qmk clean
+
 # Build the default left hand target
 make-left:
     qmk compile -kb {{keyboard}} -km left
