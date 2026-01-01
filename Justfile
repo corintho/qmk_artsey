@@ -46,6 +46,7 @@ install: make
         echo "Device is not connected."
         exit 1
     fi
+    echo "Installing firmware: $FIRMWARE"
     mkdir -p .drive
     sudo mount $DEVICE .drive -o umask=000
     cp $FIRMWARE .drive
