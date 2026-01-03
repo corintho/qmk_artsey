@@ -1,4 +1,4 @@
-// Copyright (c) 2021 Corintho Assuncao
+// Copyright (c) 2025 Corintho Assuncao
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 #include "modifiers.h"
