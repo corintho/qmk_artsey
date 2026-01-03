@@ -5,9 +5,6 @@
 
 #include "layers.h"
 #include "combos.h"
-#ifdef RGBLIGHT_ENABLE
-#include "rgb/rgb.h"
-#endif
 
 // copied from https://beta.docs.qmk.fm/faqs/faq_debug#which-matrix-position-is-this-keypress
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

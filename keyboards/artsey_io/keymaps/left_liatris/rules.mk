@@ -1,9 +1,6 @@
-INTROSPECTION_KEYMAP_C = users/shared/keymap.c
+USER_NAME := shared
 
 COMBO_ENABLE = yes
 RGBLIGHT_ENABLE = yes
 WS2812_DRIVER = vendor
 
-# Optimizations
-LTO_ENABLE = yes
-SPACE_CADET_ENABLE = no
