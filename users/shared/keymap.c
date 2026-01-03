@@ -4,7 +4,7 @@
 #include QMK_KEYBOARD_H
 
 #include "layers.h"
-#include "combos.h"
+#include "combos.c"
 
 // copied from https://beta.docs.qmk.fm/faqs/faq_debug#which-matrix-position-is-this-keypress
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {

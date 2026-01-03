@@ -1,5 +1,3 @@
-#pragma once
-
 #include <stdint.h>
 #include "action_layer.h"
 #include "action_util.h"
