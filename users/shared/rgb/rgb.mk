@@ -1,4 +1,4 @@
 ifeq ($(strip $(RGBLIGHT_ENABLE)), yes)
     SRC += $(USER_PATH)/rgb/rgb.c
-    CONFIG_H += $(USER_PATH)/rgb/rgb.h
+    CONFIG_H += $(USER_PATH)/rgb/config.h
 endif
