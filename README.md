@@ -4,6 +4,8 @@
 
 For general instructions on how to setup see [main readme](https://github.com/qmk/qmk_userspace/blob/main/README.md).
 
+Keep in mind that for this repository to work properly, you need to use this repo as the [firmware repo](https://github.com/corintho/qmk_firmware_artsey) during QMK setup. If you are maintainig your own firmware, be sure to copy the keyboard definition from `keyboards/artsey_io` to your own firmware setup.
+
 ## Overview
 I keep my keymaps here, along with the original reference for the [beta 0.9](https://artsey.io/#beta-090)
 I have a liatris board, so I also maintain a custom version for it.
