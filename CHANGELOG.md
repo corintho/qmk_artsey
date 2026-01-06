@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.1.1] - 2026-01-06
+
+Disables console by default, which reduces the firmware by a significant size
+
 ## [1.1.0] - 2026-01-03
 
 Added white LED flashing on the Liatris variation when activating the shift mode.
