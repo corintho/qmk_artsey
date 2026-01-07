@@ -61,3 +61,9 @@ check-device:
     cp $FIRMWARE .drive
     sudo umount .drive
     rm -r .drive
+
+# Create a new SVG reference file
+[group('svg')]
+[working-directory: 'keymap']
+build-svg:
+    keymap -c artsey_config.yaml draw artsey.yaml > artsey.ortho.svg
