@@ -1,8 +1,10 @@
 // Copyright (c) 2025 Corintho Assuncao
 // SPDX-License-Identifier: GPL-2.0-or-later
 
+#include "action_util.h"
 #include QMK_KEYBOARD_H
 
+#include "custom_keycodes.h"
 #include "layers.h"
 #include "combos.c"
 
@@ -12,6 +14,51 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #ifdef CONSOLE_ENABLE
     uprintf("KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u, interrupt: %b, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
 #endif
+    uint8_t mods = get_mods();
+    switch (keycode) {
+        case PANIC:
+            if (record->event.pressed) {
+                clear_mods();
+                clear_oneshot_mods();
+            }
+            break;
+        case TOGGLE_CONTROL:
+            if (record->event.pressed) {
+                if (mods & MOD_MASK_CTRL) {
+                    del_mods(MOD_MASK_CTRL);
+                } else {
+                    add_mods(MOD_MASK_CTRL);
+                };
+            }
+            break;
+        case TOGGLE_GUI:
+            if (record->event.pressed) {
+                if (mods & MOD_MASK_GUI) {
+                    del_mods(MOD_MASK_GUI);
+                } else {
+                    add_mods(MOD_MASK_GUI);
+                };
+            }
+            break;
+        case TOGGLE_ALT:
+            if (record->event.pressed) {
+                if (mods & MOD_MASK_ALT) {
+                    del_mods(MOD_MASK_ALT);
+                } else {
+                    add_mods(MOD_MASK_ALT);
+                };
+            }
+            break;
+        case TOGGLE_SHIFT:
+            if (record->event.pressed) {
+                if (mods & MOD_MASK_SHIFT) {
+                    del_mods(MOD_MASK_SHIFT);
+                } else {
+                    add_mods(MOD_MASK_SHIFT);
+                };
+            }
+            break;
+    }
     return true;
 }
 
@@ -38,4 +85,3 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_ART_NAV] = LAYOUT_ortho_2x4(NAV_1_1, NAV_1_2, NAV_1_3, NAV_1_4, NAV_2_1, NAV_2_2, NAV_2_3, NAV_2_4),
 };
-
